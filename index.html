@@ -1,74 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vikash Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vikash Kumar Pandey — Portfolio</title>
+  <meta name="description" content="Vikash Kumar Pandey — Junior Cybersecurity | Frontend | Data Analyst" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="profile">
-            <img src="images/profile.jpg" alt="Vikash Photo">
-            <h1>Vikash Kumar Pandey</h1>
-            <p>Junior Cybersecurity | Frontend Developer | Data Analyst</p>
+
+  <!-- Animated background -->
+  <div class="bg-aurora" aria-hidden="true"></div>
+
+  <header class="site-header container">
+    <div class="brand">
+      <div class="logo">VK</div>
+      <div>
+        <div class="name">Vikash Kumar Pandey</div>
+        <div class="role">Junior Cybersecurity • Frontend • Data Analyst</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+      <a class="cta" href="https://vikashpandey866.github.io/Portfolio/resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+      <button id="themeToggle" class="icon-btn" title="Toggle theme">🌓</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-left">
+        <h1 class="hero-title">Hi — I'm <span class="accent">Vikash</span></h1>
+        <p class="hero-sub">I build secure and usable web experiences — authentication systems, responsive interfaces, and data insights.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="https://vikashpandey866.github.io/Portfolio/resume.pdf" target="_blank" rel="noreferrer">Download CV</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a BCA 3rd year student and aspiring cybersecurity professional. I also work on frontend development and data analytics projects.</p>
-        <a href="resume.pdf" class="btn" download>Download Resume</a>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Cybersecurity Basics</li>
-            <li>Frontend Development (HTML, CSS, JS)</li>
-            <li>Data Analysis (Excel, Python)</li>
+        <ul class="stats">
+          <li><strong>3+</strong><span>Real Simulations</span></li>
+          <li><strong>10+</strong><span>Projects & Exercises</span></li>
+          <li><strong>BCA</strong><span>Swami Vivekanand Subharti University</span></li>
         </ul>
+      </div>
+
+      <aside class="hero-card" aria-hidden="true">
+        <div class="portrait-wrap">
+          <!-- place your image at images/profile.jpg -->
+          <img src="images/profile.jpg" alt="Vikash Photo" class="portrait" />
+        </div>
+
+        <div class="quick">
+          <div class="quick-item"><strong>Email</strong><span>pandvikash46@gmail.com</span></div>
+          <div class="quick-item"><strong>Phone</strong><span>+91 9110989610</span></div>
+        </div>
+
+      </aside>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>User Authentication System (Java)</li>
-            <li>College Event Calendar (HTML, CSS, JS)</li>
-            <li>Contact Form with Validation</li>
-        </ul>
+    <!-- ABOUT -->
+    <section id="about" class="panel">
+      <h2 class="panel-title">About Me</h2>
+      <div class="panel-grid">
+        <div class="card">
+          <p>I'm a BCA 3rd-year student from Varanasi with focus on cybersecurity fundamentals, frontend engineering and data analysis. I prefer hands-on projects — authentication systems, event apps and dashboards.</p>
+          <ul class="tags">
+            <li>Web Security</li>
+            <li>Auth & Hashing</li>
+            <li>UI/UX</li>
+            <li>Data Wrangling</li>
+          </ul>
+        </div>
+
+        <div class="timeline card" aria-hidden="false">
+          <div class="timeline-item">
+            <time>2025 Aug</time>
+            <p>Accenture Developer Simulation — completed</p>
+          </div>
+          <div class="timeline-item">
+            <time>2025 Jul</time>
+            <p>TATA Cybersecurity Analyst Simulation — certificate</p>
+          </div>
+          <div class="timeline-item">
+            <time>2023 Sep</time>
+            <p>HTML Advanced — Programming Hub</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="certificates">
-        <h2>Certificates</h2>
+    <!-- SKILLS -->
+    <section id="skills" class="panel">
+      <h2 class="panel-title">Skills — Proficiency</h2>
+      <div class="skills-grid">
+        <div class="skill-card" data-tilt>
+          <h3>Cybersecurity</h3>
+          <div class="skill-bar"><span style="--val:85%"></span></div>
+          <p class="muted">Network Security • Auth • OWASP basics</p>
+        </div>
+
+        <div class="skill-card" data-tilt>
+          <h3>Frontend</h3>
+          <div class="skill-bar"><span style="--val:92%"></span></div>
+          <p class="muted">HTML • CSS • JavaScript • React (basics)</p>
+        </div>
+
+        <div class="skill-card" data-tilt>
+          <h3>Data</h3>
+          <div class="skill-bar"><span style="--val:78%"></span></div>
+          <p class="muted">Python • Pandas • Excel</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="panel">
+      <h2 class="panel-title">Selected Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card" data-tilt>
+          <div class="project-head">
+            <h3>User Authentication System</h3>
+            <span class="chip">Java • Hashing</span>
+          </div>
+          <p>Secure authentication with salted hashing, role-based checks and input validation — built as a college project.</p>
+          <a class="link" href="#contact">Discuss</a>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-head">
+            <h3>College Event Calendar</h3>
+            <span class="chip">HTML/CSS/JS</span>
+          </div>
+          <p>Responsive calendar UI with event filters and form validation for event creation.</p>
+          <a class="link" href="#contact">See more</a>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-head">
+            <h3>Sales Insights Dashboard</h3>
+            <span class="chip">Python • Pandas</span>
+          </div>
+          <p>Exploratory dashboard showing KPIs and quick visual insights from CSV data.</p>
+          <a class="link" href="#contact">Discuss</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES (all in one div as requested) -->
+    <section id="certificates" class="panel">
+      <h2 class="panel-title">Certificates</h2>
+
+      <div class="certificates-div card">
         <div class="certificates-grid">
-            <img src="certificates/c1.jpg" alt="Certificate 1">
-            <img src="certificates/c2.jpg" alt="Certificate 2">
-            <img src="certificates/c3.jpg" alt="Certificate 3">
-            <img src="certificates/c4.jpg" alt="Certificate 4">
+          <!-- Replace image files in images/certs/ with your actual files -->
+          <div class="cert-card">
+            <img src="images/certs/tata-cyber.jpg" alt="TATA - Cybersecurity Analyst" data-full="images/certs/tata-cyber.jpg">
+            <div class="cert-meta">
+              <h4>TATA — Cybersecurity Analyst</h4>
+              <p class="muted">31 July 2025</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="images/certs/tata-genai.jpg" alt="TATA - GenAI" data-full="images/certs/tata-genai.jpg">
+            <div class="cert-meta">
+              <h4>TATA — GenAI Data Analytics</h4>
+              <p class="muted">01 Sept 2025</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="images/certs/programminghub-html.jpg" alt="HTML Advanced" data-full="images/certs/programminghub-html.jpg">
+            <div class="cert-meta">
+              <h4>Programming Hub — HTML Advanced</h4>
+              <p class="muted">27 Sept 2023</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="images/certs/accenture.jpg" alt="Accenture" data-full="images/certs/accenture.jpg">
+            <div class="cert-meta">
+              <h4>Accenture — Developer Simulation</h4>
+              <p class="muted">25 Aug 2025</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="images/certs/deloitte.jpg" alt="Deloitte" data-full="images/certs/deloitte.jpg">
+            <div class="cert-meta">
+              <h4>Deloitte — Cyber Job Simulation</h4>
+              <p class="muted">10 June 2025</p>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img src="images/certs/pwc.jpg" alt="PwC" data-full="images/certs/pwc.jpg">
+            <div class="cert-meta">
+              <h4>PwC — Cyber Security Consulting</h4>
+              <p class="muted">04 Aug 2025</p>
+            </div>
+          </div>
         </div>
+
+        <div class="resume-row" style="margin-top:12px">
+          <a class="btn primary" href="https://vikashpandey866.github.io/Portfolio/resume.pdf" target="_blank" rel="noreferrer">Download Resume (GitHub)</a>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: pandvikash46@gmail.com</p>
-        <p>Phone: 9110989610</p>
-        <p>Location: Varanasi, India</p>
+    <!-- CONTACT -->
+    <section id="contact" class="panel">
+      <h2 class="panel-title">Contact</h2>
+      <div class="card contact-card">
+        <form id="contactForm" novalidate>
+          <div class="two">
+            <input name="name" type="text" placeholder="Your name" required>
+            <input name="email" type="email" placeholder="Email" required>
+          </div>
+          <textarea name="message" rows="5" placeholder="Message" required></textarea>
+          <div class="form-row">
+            <button type="submit" class="btn primary">Send Message</button>
+            <div id="formMsg" class="muted"></div>
+          </div>
+        </form>
+
+        <div class="muted" style="margin-top:12px">
+          <div><strong>Email:</strong> <a href="mailto:pandvikash46@gmail.com">pandvikash46@gmail.com</a></div>
+          <div><strong>Phone:</strong> +91 9110989610</div>
+          <div><strong>Location:</strong> Varanasi, India</div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Vikash Kumar Pandey | All Rights Reserved</p>
-    </footer>
+  </main>
 
-    <script src="script.js"></script>
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Vikash Kumar Pandey — Built with ❤️ & code</div>
+  </footer>
+
+  <!-- LIGHTBOX for certificates -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lbClose" class="lb-close" aria-label="close">✕</button>
+    <img id="lbImage" alt="Certificate preview">
+  </div>
+
+  <!-- Chat Assistant (floating) -->
+  <div id="assistant" class="assistant" aria-hidden="false">
+    <button id="assistantToggle" class="assistant-toggle" aria-label="Open assistant">💬</button>
+    <div class="assistant-window" id="assistantWindow" aria-hidden="true">
+      <div class="assistant-head">
+        <strong>Vikash's Assistant</strong>
+        <button id="assistantClose" aria-label="close">✕</button>
+      </div>
+      <div id="assistantMessages" class="assistant-messages" aria-live="polite"></div>
+      <div class="assistant-input">
+        <input id="assistantInput" placeholder="Ask about Vikash (skills, resume, certificates)..." />
+        <button id="voiceBtn" title="Speak">🎤</button>
+        <button id="assistantSend">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
